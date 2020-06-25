@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        var automovil = {
+            marca: 'Mazda',
+            modelo: '3 sport',
+            patente: 'LJKH63',
+            color: 'azul',
+            kilometraje: 15000,
+            usado: false,
+            vender: function () {
+                alert('automóvil vendido.');
+            },
+        };
+
+        function auto(marca, modelo, patente, color, kilometraje, usado) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.patente = patente;
+            this.color = color;
+            this.kilometraje = kilometraje;
+            this.usado = usado;
+            this.vender = function () {
+                alert('automóvil vendido como auto.');
+            };
+        };
+
+        var vehiculo = new auto("jdjdj", "jjdjdd", "hdshhd", "dhdshhds", 1200, true);
+
+        alert(vehiculo.marca + " " + vehiculo.modelo + " " + vehiculo.patente + " " + vehiculo.color + " " + vehiculo.kilometraje + " " + vehiculo.usado)
+        vehiculo.vender();
+
+        var vehiculo2 = new auto("susuki", "jjdjdd", "hdshhd", "dhdshhds", 1200, true)
+        alert(vehiculo2.marca + " " + vehiculo2.modelo + " " + vehiculo2.patente + " " + vehiculo2.color + " " + vehiculo2.kilometraje + " " + vehiculo2.usado)
+        vehiculo2.vender();
+
+        alert(automovil.marca + " " + automovil.modelo + " " + automovil.patente + " " + automovil.color + " " + automovil.kilometraje + " " + automovil.usado)
+        automovil.vender();
+*/
+        /*
+                var numeros = [];
+                var numbers = [65, 44, 12, 4];
+                document.writeln("<br>funcion foreach");
+                numbers.forEach(myFunction)
+        
+                document.writeln("<br>nuevo array numeros " + numbers);
+                document.writeln("<br>numeros rescatados " + numeros);
+        
+                function myFunction(item, index, arr) {
+                    document.writeln("<br>valor " + item + " indice " + index + " array " + arr)
+                    arr[index] = item * 10;
+                    numeros[index] = item;
+                }
+        
+                //  reduce. sustrae desde la izquierda
+                document.writeln("<hr><br>FUNCION REDUCE")
+                var numbers = [175, 50, 25];
+        
+                document.writeln("<br>valor total Reduce " + numbers.reduce(myFunc));
+        
+                function myFunc(total, num) {
+                    document.writeln("<br>total " + total + "  numero" + num);
+                    return total - num;
+                }
+        
+                //map devuelve un nuevo array con los valores nuevos
+                document.writeln("<hr><br>METODO MAP");
+                var numbers = [1, 5, 10, 15];
+                var doubles = numbers.map(function (x) {
+                    document.writeln("<br>valor de x " + x)
+                    return x * 2;
+                });
+        
+                document.writeln("<br>numbers " + numbers);
+                document.writeln("<br>doubles " + doubles);
+        
+                var join1 = numbers.join(' - ');
+                console.log(join1)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        */
+        var dental = [
+            { hora: '8:30', especialista: 'ANDREA ZUÑIGA', paciente: 'MARCELA RETAMAL', rut: '11123425-6', prevision: 'ISAPRE' },
+            { hora: '11:00', especialista: 'MARIA PIA ZAÑARTU', paciente: 'ANGEL MUÑOZ', rut: '9878789-2', prevision: 'ISAPRE' },
+            { hora: '11:30', especialista: 'SCARLETT WITTING', paciente: 'MARIO KAST', rut: '7998789-5', prevision: 'FONASA' },
+            { hora: '13:00', especialista: 'FRANCISCO VON TEUBER', paciente: 'KARIN FERNANDEZ', rut: '18887662-K', prevision: 'FONASA' },
+            { hora: '13:30', especialista: 'EDUARDO VIÑUELA', paciente: 'HUGO SANCHEZ', rut: '17665461-4', prevision: 'FONASA' },
+            { hora: '14:00', especialista: 'RAQUEL VILLASECA', paciente: 'ANA SEPULVEDA', rut: '14441281-0', prevision: 'ISAPRE' },
+        ];
+        /*
+                dental.forEach(function (element) {
+                    var elemento = [element.hora, element.especialista, element.paciente, element.rut, element.prevision];
+                    document.write(`<p>${elemento.join("-")}</p>`);
+                    document.write(`<br>`);
+                });
+        
+        
+        
+                var radiologia = [
+                    { hora: '11:00', especialista: 'IGNACIO SCHULZ', paciente: 'FRANCISCA ROJAS', rut: '9878782-1', prevision: 'FONASA' },
+                    { hora: '11:30', especialista: 'FEDERICO SUBERCASEAUX', paciente: 'PAMELA ESTRADA', rut: '15345241-3', prevision: 'ISAPRE' },
+                    { hora: '15:00', especialista: 'FERNANDO WURTHZ', paciente: 'ARMANDO LUNA', rut: '16445345-9', prevision: 'ISAPRE' },
+                    { hora: '15:30', especialista: 'ANA MARIA GODOY', paciente: 'MANUEL GODOY', rut: '17666419-0', prevision: 'FONASA' },
+                    { hora: '16:00', especialista: 'PATRICIA SUAZO', paciente: 'RAMON ULLOA', rut: '14989389-K', prevision: 'FONASA' },
+                ];
+        
+        
+                document.write('<h3>2. Eliminar el primer y último elemento del arreglo de Radiología.</h3>');
+                // se utiliza una copia para no modificar el Array origina
+                var copia_radiologia = radiologia;
+                document.write('<h4> Lista pacientes Radiologia</h4>');
+        
+                copia_radiologia.forEach(radiologiaDatos => {
+                    document.write("<p>" + radiologiaDatos.rut + " - " + radiologiaDatos.paciente + " - " + radiologiaDatos.prevision + "\n</p>");
+                });
+                var iRad = copia_radiologia.length - 1;
+                document.write('<p>Se eliminara el primer Paciente: ' + copia_radiologia[0].paciente + '</p>');
+                document.write('<p>Se eliminara el ultimo Paciente: ' + copia_radiologia[iRad].paciente + '</p>');
+        
+                copia_radiologia.pop; // se elimina el primer registro de el array copia_radiologia
+                copia_radiologia.shift; // se elimina el ultimi registro de el array copia_radiologia
+        
+                document.write('<h4> Lista pacientes Radiologia Actualizado</h4>');
+                copia_radiologia.forEach(radiologiaDatos => {
+                    document.write("<p>" + radiologiaDatos.rut + " - " + radiologiaDatos.paciente + " - " + radiologiaDatos.prevision + "\n</p>");
+                });
+        
+        
+        */
+
+        /*
+                document.write('<h3>5. Modificar mediante funciones las previsiones de Dental</h3>');
+                var copia_Dental = dental;
+                console.log(copia_Dental);
+        
+                document.write('<h4>Listado Dental Pacientes</h4>');
+                copia_Dental = copia_Dental.map(function (copiaDental) {
+                    document.write("<p>" + copiaDental.prevision + "; " + copiaDental.rut + " - " + copiaDental.paciente + "</p>");
+                    if (copiaDental.prevision === "FONASA") {
+                        copiaDental.prevision = "ISAPRE";
+                    }else if(copiaDental.prevision=== "ISAPRE"){
+                        copiaDental.prevision = "FONASA";
+                    };
+        
+                    return copiaDental;
+                    alert("cambio prebision");
+                });
+        
+                document.write('<p>Listado Dental con pacientes que se cambio la prevision</p>');
+        
+                copia_Dental.forEach(copDental => {
+                    document.write("<p>" + copDental.prevision + "; " + copDental.rut + " - " + copDental.paciente + "</p>");
+                });
+        
+           
+        
+        
+                document.write('<h3>5. Modificar mediante funciones las previsiones de Dental</h3>');
+        
+        
+                document.write('<h4>Listado Dental Pacientes</h4>');
+                copia_Dental.map(function (copiaDental) {
+                    document.write("<p>" + copiaDental.prevision + "; " + copiaDental.rut + " - " + copiaDental.paciente + "</p>");
+                    if (copiaDental.prevision == "FONASA") {
+                        copiaDental.prevision = "ISAPRE";
+                    } else if(copiaDental.prevision ==="ISAPRE"){
+                        copiaDental.prevision = "FONASA";
+                    }
+                    return copiaDental;
+                    alert("cambio prebision");
+                });
+        
+                document.write('<p>Listado Dental con pacientes que se cambio la prevision</p>');
+        
+                copia_Dental.forEach(copDental => {
+                    document.write("<p>" + copDental.prevision + "; " + copDental.rut + " - " + copDental.paciente + "</p>");
+                });
+        
+        */
+
+        var dental = [
+            { hora: '8:30', especialista: 'ANDREA ZUÑIGA', paciente: 'MARCELA RETAMAL', rut: '11123425-6', prevision: 'ISAPRE' },
+            { hora: '11:00', especialista: 'MARIA PIA ZAÑARTU', paciente: 'ANGEL MUÑOZ', rut: '9878789-2', prevision: 'ISAPRE' },
+            { hora: '11:30', especialista: 'SCARLETT WITTING', paciente: 'MARIO KAST', rut: '7998789-5', prevision: 'FONASA' },
+            { hora: '13:00', especialista: 'FRANCISCO VON TEUBER', paciente: 'KARIN FERNANDEZ', rut: '18887662-K', prevision: 'FONASA' },
+            { hora: '13:30', especialista: 'EDUARDO VIÑUELA', paciente: 'HUGO SANCHEZ', rut: '17665461-4', prevision: 'FONASA' },
+            { hora: '14:00', especialista: 'RAQUEL VILLASECA', paciente: 'ANA SEPULVEDA', rut: '14441281-0', prevision: 'ISAPRE' },
+        ];
+
+
+/*
+        dental.forEach(function (element) {
+            document.write("<p>" + element.join("-") + "</p>");
+            document.write(`<br>`);
+        });
+*/
+        document.write(`<h3>listado dental usando join</h3>`);
+        dental.forEach(function (element) {
+            var elemento = [element.hora, element.especialista, element.paciente, element.rut, element.prevision];
+            document.write("<p>"+ elemento.join("-") + "</p>");
+            document.write(`<br>`);
+        });
+
+        var nombre= "juan";
+        var edad = 30;
+        document.write(`<p>hola ${nombre}</p>
+                        <h1> tienes ${edad}</h1> 
+                        <br>
+                        <h6>como estas </6> `);
+
+                            document.g
+    </script>
+</body>
+
+</html>
